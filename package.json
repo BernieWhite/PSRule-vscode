@@ -10,6 +10,9 @@
   "engines": {
     "vscode": "^1.91.0"
   },
+  "extensionKind": [
+    "workspace"
+  ],
   "channel": "stable",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/microsoft/PSRule-vscode/blob/main/README.md",
