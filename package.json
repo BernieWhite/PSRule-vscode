@@ -100,8 +100,27 @@
         "command": "PSRule.restore",
         "title": "Restore modules",
         "category": "PSRule"
+      },
+      {
+        "command": "PSRule.testFile",
+        "title": "Test file",
+        "category": "PSRule"
       }
     ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "PSRule.testFile",
+          "group": "test"
+        }
+      ],
+      "editor/title/context": [
+        {
+          "command": "PSRule.testFile",
+          "group": "test"
+        }
+      ]
+    },
     "configuration": [
       {
         "title": "PSRule",

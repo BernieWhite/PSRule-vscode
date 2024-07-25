@@ -18,6 +18,7 @@ import { runAnalysisTask } from './commands/runAnalysisTask';
 import { showTasks } from './commands/showTasks';
 import { PSRuleLanguageServer, getLanguageServer } from './utils';
 import { restore } from './commands/restore';
+import { testFile } from './commands/testFile';
 
 export let taskManager: PSRuleTaskProvider | undefined;
 export let docLensProvider: DocumentationLensProvider | undefined;
@@ -136,6 +137,11 @@ export class ExtensionManager implements vscode.Disposable {
             this._context.subscriptions.push(
                 vscode.commands.registerCommand('PSRule.restore', () => {
                     restore();
+                })
+            );
+            this._context.subscriptions.push(
+                vscode.commands.registerCommand('PSRule.testFile', (path: string) => {
+                    testFile(path);
                 })
             );
         }
